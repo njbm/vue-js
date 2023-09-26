@@ -11,8 +11,9 @@
       <td>{{ item.price}} $</td> <td><button @click="removeItem(index)" class="btn btn-sm btn-danger">Delete</button></td>
     </tr>
   </tbody> 
-     <tfoot>
-      <td></td><td class="t">Total Price : </td> <td>&nbsp; {{total}} $</td>
+     <tfoot >
+      <td></td><td class="t">Total Price : </td> <td colspan="3">&nbsp; {{total}} $</td>
+
     </tfoot>
 </table>
 </template>
@@ -37,7 +38,6 @@ export default{
    }
 
 }
-
 
 </script>
 
