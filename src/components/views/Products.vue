@@ -16,12 +16,22 @@
 </template>
 
 <script>
-   export default {
-      props:['items'],
+import axios from 'axios'
+   export default {     // props: ['items'],
+      data(){
+        return { items:[] }
+      },
+      mounted(){
+        axios.get('http://localhost:3000/items').then(response =>{
+            console.log(response)
+            this.items = response.data 
+          })
+      },
       methods:{
-      addToCart(item){
+        addToCart(item){
          this.$emit ('newItemAdded',item)
-         }
+        },
+       
       }
 
    }

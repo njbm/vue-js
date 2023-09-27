@@ -1,15 +1,11 @@
 <template>
   <div id="app">
-
-<router-view></router-view>
     
-    
-    <Navbar />
+    <Navbar @search="search" />
     
     <div class="row d">
       <div class="col-sm-9">
-
-      <Products @newItemAdded="addCartItem" :items="items" />
+      <router-view></router-view>
 
       </div>
       <div class="col-sm-3">
@@ -24,13 +20,13 @@
 
 
 import Navbar from './components/Navbar.vue';
-import Products from './components/Products.vue';
+
 import Cart from './components/Cart.vue';
 import data from './data'
 
 export default {
   name: 'App',
-  components: { Navbar, Products, Cart },
+  components: { Navbar,   Cart },
   data(){
     return {
       items:[],cart:[]

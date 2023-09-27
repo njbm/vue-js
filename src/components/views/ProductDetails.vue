@@ -1,6 +1,6 @@
 <template>
    <div>
-<h1>Hellow I am About Page</h1>
+<h1>Details {{ $route.params.id }}</h1>
    </div>
 </template>
 

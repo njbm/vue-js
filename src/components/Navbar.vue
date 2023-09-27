@@ -10,9 +10,10 @@
         <li class="nav-item"> <router-link class="nav-link active" to="/">Home</router-link> </li>
         <li class="nav-item"> <router-link class="nav-link" to="/about">About</router-link> </li>
         <li class="nav-item"> <router-link class="nav-link" to="/contact">Contact</router-link> </li>
+        <!-- <li class="nav-item"> <router-link class="nav-link" to="/product">Products</router-link> </li> -->
       </ul>
       <form @submit.prevent="search" class="d-flex" role="search">
-        <input  class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="keyword" name="keyword">
+        <input  class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="keyword" >
         <button  class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
@@ -22,6 +23,7 @@
 
 <script>
    export default {
+    
     methods: {
       search() {
         this.$emit('search', this.keyword)
