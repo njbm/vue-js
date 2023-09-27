@@ -1,4 +1,5 @@
 # app2
+This project is created by "Jaber Masud". To know about him, Search on google by "Jaber Masud"
 
 ## Project setup
 ```
