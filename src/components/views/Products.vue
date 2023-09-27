@@ -9,7 +9,6 @@
           <p class="card-text"><strong>Price : {{ item.price}} $</strong></p>
           <a @click="addToCart(item)" class="btn btn-primary">Add to Cart</a> &nbsp;
           <router-link class="btn btn-primary" :to="/item/ + item.id">Details</router-link>
-          <a  ></a>
         </div>
       </div>
     </div>
