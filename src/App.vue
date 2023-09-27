@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     
-    <Navbar @search="search" />
+    <Navbar @search="search" :keyword="keyword"/>
     
     <div class="row d">
       <div class="col-sm-9">
