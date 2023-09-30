@@ -18,7 +18,7 @@
     
 </table>
 <center ><div v-if="items.length>0" class="row col-md-6">
-   <button @click="checkout" class="btn btn-outline-success btn-lg ">Checkout</button>
+   <button @click="checkout" class="btn btn-outline-success  ">Checkout</button>
 </div></center>
 </template>
 
