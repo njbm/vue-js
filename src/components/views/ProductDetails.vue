@@ -12,7 +12,7 @@
             <p class="product-description">
                {{ item.description }}
             </p>
-            <button class="btn btn-primary">Add to Cart</button>
+            <button @click="addToCart(item)" class="btn btn-primary">Add to Cart</button>
             </div>
          </div>
       </div><h3 v-else> Loading</h3>
@@ -36,7 +36,10 @@ import axios from 'axios';
             var self = this
             axios.get('http://localhost:3000/item/' +this.$route.params.id).then(response=>{
                self.item= response.data
-            })
+            });
+         },
+         addToCart(item){
+            this.$store.commit('addToCart', item)
          }
       }
       

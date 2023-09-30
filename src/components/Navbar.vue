@@ -23,7 +23,7 @@
 
 <script>
 import axios from 'axios';
-   export default {
+  export default {
     data(){
       return {
         keyword : ''
@@ -39,7 +39,7 @@ import axios from 'axios';
         });
       }
     }
-   }
+  }
 </script>
 
 <style scoped>

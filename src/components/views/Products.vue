@@ -30,7 +30,7 @@ import axios from 'axios'
       },
       methods:{
         addToCart(item){
-         this.$emit ('newItemAdded',item)
+         this.$store.commit('addToCart', item)
         },
        
       }

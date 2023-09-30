@@ -20,7 +20,6 @@
 
 
 import Navbar from './components/Navbar.vue';
-
 import Cart from './components/Cart.vue';
 import data from './data'
 
