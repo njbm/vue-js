@@ -42,11 +42,11 @@ export default {
     removeItem(index){
       this.cart.splice(index, 1)
     },
-    search(keyword){
-      this.items = data.filter(item=>{
-        return item.title.toLocaleLowerCase().indexOf(keyword.toLocaleLowerCase()) !== -1
-      });
-    }
+    // search(keyword){
+    //   this.items = data.filter(item=>{
+    //     return item.title.toLocaleLowerCase().indexOf(keyword.toLocaleLowerCase()) !== -1
+    //   });
+    // }
   },
 
 }
