@@ -20,12 +20,18 @@
 import axios from 'axios'
    export default {     // props: ['items'],
       data(){
-        return { items:[], loading:false }
+        return {  loading:false }
+      },
+      computed:{
+          items(){
+            return this.$store.getters.getProducts
+          }
       },
       mounted(){
         axios.get('http://localhost:3000/items').then(response =>{
             console.log(response)
-            this.items = response.data 
+
+            this.$store.commit('setProduct', response.data)
           })
       },
       methods:{

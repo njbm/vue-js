@@ -12,10 +12,14 @@
     </tr>
   </tbody> 
      <tfoot >
-      <td></td><td class="t">Total Price : </td> <td colspan="3">&nbsp; {{total}} $</td>
+      <td></td><td class="t">Total Price : </td> <td colspan="3">&nbsp; {{total}} $</td> 
 
     </tfoot>
+    
 </table>
+<center ><div v-if="items.length>0" class="row col-md-6">
+   <button @click="checkout" class="btn btn-outline-success btn-lg ">Checkout</button>
+</div></center>
 </template>
 
 <script>
@@ -31,13 +35,19 @@ export default{
                this.items.forEach(item => {
                   total += parseFloat(item.price)
                });
-               return total+ '';
+               return total.toFixed(2);
             }
 
    },
    methods:{
       removeItem(index){
          this.$store.commit('removeItem', index)
+      },
+      checkout(){
+         if(confirm("Are You Sure You want to checkout..?")){
+            this.$store.commit('clearCart')
+         }
+         
       }
    }
 

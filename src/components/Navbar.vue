@@ -32,10 +32,11 @@ import axios from 'axios';
     
     methods: {
       search() {
+        var self =this;
         const lowercaseKeyword = typeof this.keyword === 'string' ? this.keyword.toLocaleLowerCase() : '';
         
         axios.get('http://localhost:3000/search/' + lowercaseKeyword).then(response => {
-          console.log(response.data);
+          self.$store.commit('setProduct', response.data) 
         });
       }
     }
