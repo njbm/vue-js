@@ -1,5 +1,5 @@
 # Vue Application
-This project is created by "Jaber Masud". To know about him, Search on google by "Jaber Masud" or "masud9900"
+<p style="color:red;"> This project is created by "Jaber Masud". To know about him, Search on google by :  <a href="https://jaber.netlify.app"> "Jaber Masud"</a> or <a href="https://goo.by/WfVSqx">"masud9900"</a> </p>
 
 ## Project setup
 ```
