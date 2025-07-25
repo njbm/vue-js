@@ -3,7 +3,7 @@
 
 ## Clone The Repository
 ```
-git clone https://github.com/njbm/Vue.JS.git
+git clone https://github.com/njbm/vue-js.git
 ```
 
 ## Project setup
